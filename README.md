@@ -1,23 +1,24 @@
 # PUFFIN
 
 PUFFIN, Personal User Floor For Impression Negotiations, is an enhancement
-of TURTLEDOVE and related proposals, intended to enable users to 
+for TURTLEDOVE and related proposals, intended to enable users to 
 incentivize the production and distribution of desired ad-supported content.
 
 
 ## Motivation
 
-New proposals for enabling interest group based advertising are likely to have
-two key effects on the advertising market.
+New proposals for enabling interest group based advertising are predicted
+to have two key effects on the web advertising market.
 
- * Additional ad revenue for sites because of increased advertiser knowledge
-   of audience composition in real time, similar to the effect shown by 
+ * Additional incremental ad revenue for publisher sites because of 
+   increased advertiser knowledge
+   of audience composition, similar to the effect shown by 
    Johnson et al. for the third-party cookie.
 
  * Leakage of ad revenue from high-engagement, high-reputation sites to
    lower-engagement sites where the same audience appears to be available.
 
-While proposed post-cookie ad systems can address the leakage of _data_ away
+While proposed post-cookie ad systems are already address the leakage of _data_ away
 from high-reputation sites, the _revenue_ leakage is still a 
 problem for web users who are members of the audience for that content
 and prefer to see more of it produced.
@@ -45,7 +46,7 @@ interest-group advertising selectively.
 # Proposal
 
 In TURTLEDOVE and related proposals, a contextual ad and an interest-group ad
-participate in an auction, and the interest-based ad wins (and is displayed to the user)
+participate in an auction. The interest-based ad wins (and is displayed to the user)
 if it can outbid the highest-bidding contextual ad.
 
 PUFFIN is a persistent per-browser floor price that the interest-group ad bid must
@@ -56,7 +57,7 @@ contextual ad bids.  The interest-based ad must beat not only the highest-biddin
 contextual ad, but also the average contextual ad displayed in the same browser.
 
 This presents no problem for the positive, revenue-enhancing uses of interest-based
-advertising, but limits revenue leakage effects.
+advertising, but limits the revenue leakage effects.
 
 Because PUFFIN is intended to incentivize production of high-engagement content, 
 browsers may choose to adjust PUFFIN based on site engagement score, with a lower
