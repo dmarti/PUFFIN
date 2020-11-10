@@ -27,34 +27,38 @@ and prefer to see more of it produced.
 ## Incentives for ecosystem participants
 
 The advertising literature generally focuses on the
-use of advertising by the _seller_ of a good
-or service to produce desired behavior in the _buyer_.
+use of advertising by the seller of a good
+or service to produce desired behavior in the buyer.
 Today's web advertising ecosystem, however, is
 more complex.  Advertising placement decisions are encoded in
-software run in the _buyer_'s browser, under control of
+software run in the buyer's browser, under control of
 the buyer, and can therefore be designed to produce
-desired behavior in the _seller_.
+desired behavior in the seller.
 
 The browser
 user seeks to obtain more value, in the form of
 ad-supported content of interest, for a given "cost"
 in advertising exposure.  Browser-based ad auctions
 are an opportunity for users to choose to receive
-interest-group advertising selectively.
+interest-group advertising selectively, in order to
+incentivize increasing investments in content.
 
 
 # Proposal
 
 In TURTLEDOVE and related proposals, a contextual ad and an interest-group ad
 participate in an auction. The interest-based ad wins (and is displayed to the user)
-if it can outbid the highest-bidding contextual ad.
+if it can outbid the contextual ad.
 
-PUFFIN is a persistent per-browser floor price that the interest-group ad bid must
-also exceeed in order to win the auction.
+PUFFIN is a persistent per-browser floor price that
+the interest-group ad bid must also exceeed in order
+to win the auction.  PUFFIN is calculated as an
+exponentially weighted rolling average of winning contextual
+ad bids.
 
-PUFFIN is calculated as an exponentially weighted rolling average of
-contextual ad bids.  The interest-based ad must beat not only the highest-bidding
-contextual ad, but also the average contextual ad displayed in the same browser.
+The interest-based ad must beat not only the highest-bidding
+contextual ad in the current auction, but also the average contextual ad that has
+previously appeared in the same browser.
 
 This presents no problem for the positive, revenue-enhancing uses of interest-based
 advertising, but limits the revenue leakage effects.
