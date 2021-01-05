@@ -57,20 +57,16 @@ exponentially weighted rolling average of winning contextual
 ad bids.
 
 The interest-based ad must beat not only the highest-bidding
-contextual ad in the current auction, but also the average contextual ad that has
+contextual ad in the current auction, but also the average price for contextual ads that have
 previously appeared in the same browser.
 
 This presents no problem for the positive, revenue-enhancing uses of interest-based
 advertising, but limits the revenue leakage effects.
 
 Because PUFFIN is intended to incentivize production of high-engagement content, 
-browsers may choose to adjust PUFFIN based on site engagement score, with a lower
-effective PUFFIN applied to high-engagement pages.
+browsers may choose to adjust PUFFIN based on site engagement score, with a higher
+effective PUFFIN applied to low-engagement or previously unvisited pages.
 
-
-## Example flow
-
-FIXME
 
 ## Reporting
 
