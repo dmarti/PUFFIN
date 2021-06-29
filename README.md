@@ -18,7 +18,7 @@ to have two key effects on the web advertising market.
  * Leakage of ad revenue from high-engagement, high-reputation sites to
    lower-engagement sites where the same audience appears to be available.
 
-While proposed post-cookie ad systems are already address the leakage of _data_ away
+While proposed post-cookie ad systems already address the leakage of _data_ away
 from high-reputation sites, the _revenue_ leakage is still a 
 problem for web users who are members of the audience for that content
 and prefer to see more of it produced.
@@ -67,6 +67,12 @@ Because PUFFIN is intended to incentivize production of high-engagement content,
 browsers may choose to adjust PUFFIN based on site engagement score, with a higher
 effective PUFFIN applied to low-engagement or previously unvisited pages.
 
+One alternative considered would be for in-browser ad auctions to apply a
+floating, periodically recalculated floor price to all impressions. However,
+applying the same floor to both contextual and interest group ads would
+deprive the user of valuable information about site reputation. Users
+can evaluate the trustworthiness of a site by observing which contextual ads
+the site is willing to run. PUFFIN preserves that information for the user.
 
 ## Reporting
 
