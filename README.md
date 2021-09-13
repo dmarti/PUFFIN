@@ -18,10 +18,17 @@ to have two key effects on the web advertising market.
  * Leakage of ad revenue from high-engagement, high-reputation sites to
    lower-engagement sites where the same audience appears to be available.
 
-While proposed post-cookie ad systems already address the leakage of _data_ away
+While proposed post-cookie ad systems address the leakage of _data_ away
 from high-reputation sites, the _revenue_ leakage is still a 
 problem for web users who are members of the audience for that content
 and prefer to see more of it produced.
+
+In the past, it has been difficult to take advantage of the immediate 
+revenue-boosting effects of cross-site tracking without accepting the
+revenue leakage effects.  However, moving the advertising market into
+the browser allows for adjustments to the rules of that market, in the
+interests of the user and of the ad-supported sites whose content they
+prefer.
 
 
 ## Incentives for ecosystem participants
@@ -31,8 +38,9 @@ use of advertising by the seller of a good
 or service to produce desired behavior in the buyer.
 Today's web advertising ecosystem, however, is
 more complex.  Advertising placement decisions are encoded in
-software run in the buyer's browser, under control of
-the buyer, and can therefore be designed to produce
+software run in the buyer's browser, which is the 
+agent of its user.
+The rules of the market can therefore be designed to produce
 desired behavior in the seller.
 
 The browser
@@ -41,7 +49,9 @@ ad-supported content of interest, for a given "cost"
 in advertising exposure.  Browser-based ad auctions
 are an opportunity for users to choose to receive
 interest-group advertising selectively, in order to
-incentivize increasing investments in content.
+incentivize increasing investments in the ad-supported
+content they want.
+
 
 
 # Proposal
@@ -52,7 +62,7 @@ if it can outbid the contextual ad.
 
 PUFFIN is a persistent per-browser floor price that
 the interest-group ad bid must also exceeed in order
-to win the auction.  PUFFIN is calculated as an
+to win the auction.  PUFFIN is calculated based on an
 exponentially weighted rolling average of winning contextual
 ad bids.
 
@@ -92,8 +102,10 @@ FIXME
 
 # Related work
 
-[WICG/turtledove: TURTLEDOVE](https://github.com/WICG/turtledove)
+ * [WICG/turtledove: TURTLEDOVE](https://github.com/WICG/turtledove)
 
-Johnson, Garrett and Shriver, Scott and Du, Shaoyin, Consumer Privacy Choice in Online Advertising: Who Opts Out and at What Cost to Industry? (June 19, 2019). Simon Business School Working Paper No. FR 17-19, Available at SSRN: https://ssrn.com/abstract=3020503 or http://dx.doi.org/10.2139/ssrn.3020503 
+ * Johnson, Garrett and Shriver, Scott and Du, Shaoyin, Consumer Privacy Choice in Online Advertising: Who Opts Out and at What Cost to Industry? (June 19, 2019). Simon Business School Working Paper No. FR 17-19, Available at SSRN: https://ssrn.com/abstract=3020503 or http://dx.doi.org/10.2139/ssrn.3020503 
 
-[Site Engagement - The Chromium Projects](https://www.chromium.org/developers/design-documents/site-engagement)
+ * [Site Engagement - The Chromium Projects](https://www.chromium.org/developers/design-documents/site-engagement)
+
+ * Evan Davis, John Kay, Jonathan Star. [Is advertising rational?](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8616.1991.tb00156.x)
