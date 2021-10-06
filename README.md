@@ -18,8 +18,8 @@ to have two key effects on the web advertising market.
  * Leakage of ad revenue from high-engagement, high-reputation sites to
    lower-engagement sites where the same audience appears to be available.
 
-While proposed post-cookie ad systems address the leakage of _data_ away
-from high-reputation sites, the _revenue_ leakage is still a 
+While proposed post-cookie ad systems address the leakage of user data away
+from high-reputation sites, the revenue leakage is still a 
 problem for web users who are members of the audience for that content
 and prefer to see more of it produced.
 
@@ -57,38 +57,47 @@ content they want.
 # Proposal
 
 In TURTLEDOVE and related proposals, a contextual ad and an interest-group ad
-participate in an auction. The interest-based ad wins (and is displayed to the user)
+[participate in an auction](https://github.com/WICG/turtledove/blob/main/Original-TURTLEDOVE.md#on-device-auction).
+The interest-based ad wins (and is displayed to the user)
 if it can outbid the contextual ad.
 
-PUFFIN is a persistent per-browser floor price that
-the interest-group ad bid must also exceeed in order
-to win the auction.  PUFFIN is calculated based on an
+A PUFFIN is a persistent per-browser floor price that
+the interest-group ad bid must also exceed in order
+to win the auction.  Each PUFFIN is calculated based on an
 exponentially weighted rolling average of winning contextual
-ad bids.
+ad bids.  Losing bids and interest-group bids never affect
+PUFFIN.
 
-The interest-based ad must beat not only the highest-bidding
-contextual ad in the current auction, but also the average price for contextual ads that have
-previously appeared in the same browser.
+The browser maintains one PUFFIN for each ad unit type that can be detected
+automatically. For example, a video ad and large leaderboard ad would each
+have a different PUFFIN from a small, below-the-fold ad. 
 
-This presents no problem for the positive, revenue-enhancing uses of interest-based
+With PUFFIN, in order for the interest-based ad to win the in-browser auction,
+it must beat not only the highest-bidding
+contextual ad, but also the PUFFIN for ads of the same category that have
+previously appeared in the same browser.  If the category cannot be detected or is ambiguous, 
+the interest-based ad must outbid the lowest applicable PUFFIN.
+This enables the positive, revenue-enhancing uses of interest-based
 advertising, but limits the revenue leakage effects.
 
 Because PUFFIN is intended to incentivize production of high-engagement content, 
 browsers may choose to adjust PUFFIN based on site engagement score, with a higher
 effective PUFFIN applied to low-engagement or previously unvisited pages.
 
-One alternative considered would be for in-browser ad auctions to apply a
+One alternative considered would be for in-browser ad auctions to apply
 floating, periodically recalculated floor price to all impressions. However,
 applying the same floor to both contextual and interest group ads would
 deprive the user of valuable information about site reputation. Users
 can evaluate the trustworthiness of a site by observing which contextual ads
-the site is willing to run. PUFFIN preserves that information for the user.
+the site is willing to run. PUFFIN preserves that information for the user by 
+applying in-browser floors to interest group ads only.
+
 
 ## Reporting
 
 PUFFIN provides for no additional reporting beyond
 what is available in the existing ad auction.
-The PUFFIN is confidential and per-browser, and is
+PUFFIN is confidential and per-browser, and is
 not available to any script.
 
 ## Fraud considerations
