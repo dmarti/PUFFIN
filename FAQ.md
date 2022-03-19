@@ -22,3 +22,7 @@ This could take the form of:
 
 Without revenue protection for high-engagement sites, TURTLEDOVE/FLEDGE help support malware by making it easier to monetize.
 
+
+**When is the PUFFIN applied?**
+
+In the FLEDGE origin trial, [the contextual clearing price can be used as a floor for the FLEDGE auction, and the contextual ad can be rendered in a regular iframe if the FLEDGE auction returns no...results that beat the floor](https://github.com/WICG/turtledove/issues/260#issuecomment-1072887938). The PUFFIN would be applied as an additional floor at this stage: the interest group ad would need to beat both the current winning contextual ad and the PUFFIN.
