@@ -4,6 +4,9 @@ Yes, the PUFFIN is based on previous ad transactions that may have happened on a
 
 However, a bidding function is never made aware of whether it lost an auction due to PUFFIN or due to being outbid on the current site.
 
+**Is the PUFFIN available to parties in the client-side auction?**
+
+No. Making PUFFIN available here [could encourage sites to add too many marginal people to the interest group and then rely on PUFFIN to only bid on some of them](https://github.com/dmarti/PUFFIN/issues/3).
 
 **Is PUFFIN a privacy protection measure?**
 
